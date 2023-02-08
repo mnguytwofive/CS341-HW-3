@@ -1,0 +1,92 @@
+/* Made by Milton Nguy*/
+body {
+    background-color: rgb(59, 223, 173);
+  }
+  
+  h1 {
+    color: black;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .quantity_title {
+    font-family: Tahoma;
+    font-size: 20px;
+  }
+
+  /*
+  * To move position of radio buttons to make it look similar as example on assignment,
+  * I need to set position = relative which essentially removes the anchor on the buttons
+  * and then I can set arbitrary values to set position to desirable location
+  */
+  .toppings {
+    position: relative;
+    justify-content: space-between;
+    bottom: 20px;
+    left: 50px;
+  }
+  
+  
+  #Notes {
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+    border-top: 2px solid blue;
+    border-right: 2px solid salmon;
+    border-left: 2px solid greenyellow;
+  }
+
+  ::placeholder {
+    font-style: italic;
+  }
+
+  .total {
+    font-size: 30px;
+
+  }
+
+  .results {
+    font-size: 20px;
+  }
+
+  .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /*Puts position of button on same line as text*/
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /*External Resource: https://www.w3schools.com/howto/howto_css_dropdown.asp. Used website
+  to understand how to implement dropdowns and features that I could possibly do in a dropdown.*/
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    max-height: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow-y: scroll;
+  }
+  
+  /*Changes the position and decoration of text hovering at button */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /*Displays the months when hovered towards button */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #492cca;}

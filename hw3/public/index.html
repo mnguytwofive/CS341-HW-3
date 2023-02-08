@@ -1,0 +1,76 @@
+<!--Milton Nguy-->
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="stylesheets/nguy25.css">
+  <script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+ </script>
+ <script src="javascripts/cake_desc.js"></script>
+ <script src="javascripts/removeElements.js"></script>
+</head>
+<body>
+
+<h1>Cheesecake Order Form</h1>
+
+<!--In order to get the image from wikimedia, I had to find the image browser, and there is an option called "use this file". Then I could use image in html format as just copy/pasting url would not work.-->
+<a title="Alex Dugger, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg"><img width="512" alt="Mondays at Il Forno - Cheesecake with strawberry sauce" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg/512px-Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg"></a>
+
+<p class = "quantity_title" id = "quantity_title">Quantity Topping</p>
+
+<div class="total_cheesecake">
+  <select name="count" id="count">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+</div>
+
+<div class="toppings" id = toppings_selector>
+<input type="radio" name="topping" value="Plain">Plain
+<input type="radio" name="topping" value="Cherry">Cherry
+<input type="radio" name="topping" value="Chocolate">Chocolate
+</div>
+
+<div class = "user_input" id = "user_input">
+  <label for="Notes" id="Notes_title">Notes:</label>
+  <textarea type="text" id="Notes" name="Note" rows="5" cols="45" placeholder="Enter any special instructions here."></textarea>
+  <button type="button" id="order_button" onclick="cake_desc('topping'); removeElements();">Order</button>
+</div>
+
+<!--Hidden text that will be changed once user clicks button-->
+<div class = "results">
+  <p id="order"></p>
+  <p id="order_type"></p>
+  <p id="order_notes"></p>
+</div>
+
+<div class = "user_input" id = "user_input">
+  <label for="Orders" id="Orders_id">Orders for:</label>
+  <div class="dropdown">
+    <button class="dropbtn">Jan</button>
+    <div class="dropdown-content">
+      <a href="#">Jan</a>
+      <a href="#">Feb</a>
+      <a href="#">Mar</a>
+      <a href="#">Apr</a>
+      <a href="#">May</a>
+      <a href="#">June</a>
+      <a href="#">July</a>
+      <a href="#">Aug</a>
+      <a href="#">Sep</a>
+      <a href="#">Oct</a>
+      <a href="#">Nov</a>
+      <a href="#">Dec</a>
+    </div>
+  </div>
+
+<ul>
+  <li>11 Cherry</li>
+  <li>17 Chocolate</li>
+  <li>31 Plain</li>
+</ul>
+
+</body>
+</html>
